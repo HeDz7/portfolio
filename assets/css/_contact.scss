@@ -35,7 +35,6 @@
 
       .datas {
         @include center(space-between);
-        font-size: 1.5rem;
 
         .social-medias {
           @include center(start);
@@ -43,11 +42,11 @@
 
           a {
             @include center(center);
-            width: 1rem;
-            height: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             border: 1px solid $gray-2;
-            padding: 1.5rem;
+            padding: 0.5rem;
             background-color: transparent;
             transition: 0.5s ease-in-out;
 
@@ -63,7 +62,7 @@
 
             i {
               color: $gray-2;
-              font-size: 1.5rem;
+              font-size: 1.125rem;
               transition: 0.5 ease-in-out;
             }
           }
@@ -71,18 +70,28 @@
 
         .tel {
           color: $gray-2;
+          font-size: 1.25rem;
+          border: 1px solid $gray-2;
+          padding: 0.5rem 1rem;
+          border-radius: 10px;
+
+          .number {
+            transition: 0.2s ease-in-out;
+          }
 
           i {
-            transition: .2s;
+            transition: 0.2s;
           }
 
           &:hover {
+            border: 1px solid #26c943;
+
             .number {
-              text-decoration: underline;
+              color: #26c943;
             }
 
             i {
-              color: #26C943;
+              color: #26c943;
             }
           }
         }
@@ -173,7 +182,7 @@
   .col-bg {
     position: relative;
     z-index: 2;
-    
+
     svg {
       .number-bg,
       .number-bg-front,
@@ -198,6 +207,20 @@
 
         .cel-screen-bg {
           fill: white !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    text-align: center;
+
+    .col-form {
+      .col-social {
+        .datas {
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 2rem;
         }
       }
     }

@@ -502,7 +502,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
 }
 .contact .col-form .col-social .datas .social-medias {
   display: flex;
@@ -515,11 +514,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1rem;
-  height: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   border: 1px solid #f5f5f5;
-  padding: 1.5rem;
+  padding: 0.5rem;
   background-color: transparent;
   transition: 0.5s ease-in-out;
 }
@@ -533,20 +532,30 @@ section {
 }
 .contact .col-form .col-social .datas .social-medias a i {
   color: #f5f5f5;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   transition: 0.5 ease-in-out;
 }
 .contact .col-form .col-social .datas .tel {
   color: #f5f5f5;
+  font-size: 1.25rem;
+  border: 1px solid #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+.contact .col-form .col-social .datas .tel .number {
+  transition: 0.2s ease-in-out;
 }
 .contact .col-form .col-social .datas .tel i {
   transition: 0.2s;
 }
+.contact .col-form .col-social .datas .tel:hover {
+  border: 1px solid #26c943;
+}
 .contact .col-form .col-social .datas .tel:hover .number {
-  text-decoration: underline;
+  color: #26c943;
 }
 .contact .col-form .col-social .datas .tel:hover i {
-  color: #26C943;
+  color: #26c943;
 }
 .contact .col-form form {
   row-gap: 1rem;
@@ -631,6 +640,16 @@ section {
 }
 .contact .col-bg svg:hover .cel-screen-bg {
   fill: white !important;
+}
+@media screen and (max-width: 568px) {
+  .contact {
+    text-align: center;
+  }
+  .contact .col-form .col-social .datas {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+  }
 }
 
 @keyframes tremolo {
