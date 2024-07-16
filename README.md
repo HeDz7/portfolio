@@ -1,2 +1,2 @@
-# portifolio
- Meu portifolio como dev frontend
+# my-portifolio
+ Meu portifolio como desenvolvedor frontend

@@ -1,0 +1,219 @@
+.contact {
+  background-color: $secondary;
+  background-image: url("../images/bg-contact.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($secondary, 0.8);
+    z-index: -1;
+  }
+
+  .col-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $gray-2;
+
+    .col-social {
+      display: block;
+      width: 100%;
+      margin-bottom: 3rem;
+      color: $gray-2;
+
+      .datas {
+        @include center(space-between);
+        font-size: 1.5rem;
+
+        .social-medias {
+          @include center(start);
+          column-gap: 0.5rem;
+
+          a {
+            @include center(center);
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 1px solid $gray-2;
+            padding: 1.5rem;
+            background-color: transparent;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+              background-color: $gray-2;
+              color: $tertiary;
+              border: 1px solid $tertiary;
+
+              i {
+                color: $secondary;
+              }
+            }
+
+            i {
+              color: $gray-2;
+              font-size: 1.5rem;
+              transition: 0.5 ease-in-out;
+            }
+          }
+        }
+
+        .tel {
+          color: $gray-2;
+
+          i {
+            transition: .2s;
+          }
+
+          &:hover {
+            .number {
+              text-decoration: underline;
+            }
+
+            i {
+              color: #26C943;
+            }
+          }
+        }
+      }
+    }
+
+    form {
+      row-gap: 1rem;
+
+      .form-group {
+        height: max-content;
+      }
+
+      .form-control {
+        &:focus {
+          outline: none;
+          border-color: transparent;
+          box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.331);
+          background: white;
+
+          .cel-screen-bg {
+            fill: white !important;
+          }
+        }
+      }
+
+      button,
+      input,
+      textarea {
+        padding: 0.5rem 1.5rem;
+        border-radius: 12px;
+        background: darken($gray-1, 10%);
+        transition: 0.2s ease-in-out;
+      }
+
+      button {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid $gray-2;
+
+        &::after {
+          content: "";
+          clip-path: polygon(
+            25% 0%,
+            75% 0%,
+            100% 50%,
+            75% 100%,
+            25% 100%,
+            0% 50%
+          );
+          background-color: $tertiary;
+          width: 0;
+          height: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 0.6s ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            width: 150%;
+            height: 150%;
+          }
+        }
+
+        .text-button {
+          position: relative;
+          z-index: 2;
+          color: white;
+          mix-blend-mode: difference;
+        }
+      }
+
+      .col-btn {
+        display: flex;
+        justify-content: end;
+      }
+
+      .feedback {
+        color: $gray-2;
+        animation: appears 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .col-bg {
+    svg {
+      .number-bg,
+      .number-bg-front,
+      .number-bg-side {
+        transition: 1s ease-in-out;
+      }
+      .card-bg,
+      .cel-screen-bg {
+        transition: 0.6s ease;
+      }
+
+      &:hover {
+        .number-bg,
+        .number-bg-front,
+        .number-bg-side {
+          transform: translateY(-25px);
+        }
+
+        .card-bg {
+          animation: tremolo 1s ease-in infinite;
+        }
+
+        .cel-screen-bg {
+          fill: white !important;
+        }
+      }
+    }
+  }
+}
+
+@keyframes tremolo {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

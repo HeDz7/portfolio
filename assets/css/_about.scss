@@ -1,0 +1,143 @@
+.about {
+  background-color: $tertiary;
+  z-index: 999;
+
+  .container {
+    row-gap: 2rem;
+  }
+
+  .card-about {
+    border: 1px solid $gray-2;
+    background-color: lighten($tertiary, 10%);
+    padding: 2rem;
+    border-radius: 1rem;
+
+    .col-img {
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+
+    .col-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      .title {
+        margin: 1rem 0;
+        mix-blend-mode: normal;
+        text-decoration: none;
+      }
+
+      .text {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .guideline {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+
+    i {
+      font-size: 3rem;
+      transition: 0.2s ease-in-out;
+      width: 50px;
+      height: 50px;
+      flex: 1;
+      @include center(center);
+
+      &.html {
+        color: #dd4b25;
+      }
+      &.css {
+        color: #254bdd;
+      }
+      &.sass {
+        color: #c76494;
+      }
+      &.bootstrap {
+        color: #8a18fd;
+      }
+      &.js {
+        color: #efd81d;
+      }
+      &.vuejs {
+        color: #3fb27f;
+      }
+      &.php {
+        color: #7377ad;
+      }
+      &.wp {
+        color: #28799e;
+      }
+      &.figma,
+      &.github {
+        color: white;
+      }
+
+      // &:hover {
+      //   &.html {
+      //     color: #DD4B25;
+      //   }
+      //   &.css {
+      //     color: #254BDD;
+      //   }
+      //   &.sass {
+      //     color: #C76494;
+      //   }
+      //   &.bootstrap {
+      //     color: #8A18FD;
+      //   }
+      //   &.js {
+      //     color: #EFD81D;
+      //   }
+      //   &.vuejs {
+      //     color: #3FB27F;
+      //   }
+      //   &.php {
+      //     color: #7377AD;
+      //   }
+      //   &.wp {
+      //     color: #28799E;
+      //   }
+      //   &.figma, &.github {
+      //     color: white;
+      //   }
+      // }
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    .card-about {
+      .col-img {
+        img {
+          height: 400px;
+        }
+      }
+
+      .col-content {
+        .title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .guideline {
+      row-gap: 1rem;
+
+      i {
+        flex: 20%;
+      }
+    }
+  }
+}
