@@ -115,7 +115,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/portifolio-thiago/assets/images/projects/bg.jpg");
+  background-color: #0e0e0e;
+  background-image: url("../images/projects/bg.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -465,13 +466,11 @@ section {
 
 .contact {
   background-color: #0e0e0e;
-  background-image: url("/portifolio-thiago/assets/images/bg-contact.jpg");
+  background-image: url("../images/bg-contact.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  -webkit-backdrop-filter: grayscale(100%);
-          backdrop-filter: grayscale(100%);
   position: relative;
 }
 .contact::after {
