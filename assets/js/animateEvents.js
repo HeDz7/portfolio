@@ -1,3 +1,10 @@
+/*
+ * @author Vander Amorin
+ * http://vanderamorin.com
+ * 
+ * Usage <div data-scrollclass="classToAppend"></div>
+ */
+
 (function () {
   "use strict";
 
